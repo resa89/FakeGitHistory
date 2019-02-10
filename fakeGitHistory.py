@@ -24,13 +24,13 @@ def make_git_add(file):
 def make_git_commit(timestamp1, timestamp2, commit_message):
 
     date_blank =  timestamp1.strftime('%c') + " +0100" #"Tue Dec 18 09:10 2018 +0100"
-    date_blank2 =  timestamp2.strftime('%c') + " +0100" #"Tue Dec 18 09:10 2018 +0100"
-    date_blank = date_blank
-    date_blank2 = date_blank2
+    #date_blank2 =  timestamp2.strftime('%c') + " +0100" #"Tue Dec 18 09:10 2018 +0100"
+    date_blank = date_blank[:16] + date_blank[19:]
+    #date_blank2 = date_blank2[:16] + date_blank2[19:]
 
-    date_minus =  timestamp2.strftime('%Y-%m-%d %H:%M:%S') #"#2018-12-18 09:10:22"
+    date_minus =  timestamp1.strftime('%Y-%m-%d %H:%M:%S') #"#2018-12-18 09:10:22"
 
-    terminal_cmd = 'GIT_AUTHOR_DATE="' + date_blank + '" GIT_COMMITTER_DATE="' + date_blank2 + '" git commit --date="' + date_minus + '" -m "' + commit_message + '"'
+    terminal_cmd = 'GIT_AUTHOR_DATE="' + date_blank + '" GIT_COMMITTER_DATE="' + date_blank + '" git commit --date="' + date_minus + '" -m "' + commit_message + '"'
 
     # execute in terminal
     print("CONSOLE COMMAND: ", terminal_cmd)
