@@ -105,15 +105,15 @@ def sort_files_in_folder_by_changetime(folder):
         sub_df = df[df['date'] == day]
 
         # for every file edited at this day
-        for i in range(sub_df.shape[0]):
-            file = sub_df['path'][0]
+        for z in sub_df.index:
+            file = sub_df['path'][z]
             make_git_add(file)
 
         # make one commit for one day
         file_names = [file_name.split("/")[-1] for file_name in sub_df['path']]
         commit_message = "Add following files: " + str(file_names)[1:-1]
-        timestamp_1 = sub_df['timestamp_1'][0]
-        timestamp_2 = sub_df['timestamp_2'][0]
+        timestamp_1 = sub_df['timestamp_1'][z]
+        timestamp_2 = sub_df['timestamp_2'][z]
 
         print("COMMIT_MESSAGE: ", commit_message)
         make_git_commit(timestamp_1, timestamp_2, commit_message)
