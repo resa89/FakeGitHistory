@@ -25,6 +25,8 @@ def make_git_commit(timestamp1, timestamp2, commit_message):
 
     date_blank =  timestamp1.strftime('%c') + " +0100" #"Tue Dec 18 09:10 2018 +0100"
     date_blank2 =  timestamp2.strftime('%c') + " +0100" #"Tue Dec 18 09:10 2018 +0100"
+    date_blank = date_blank
+    date_blank2 = date_blank2
 
     date_minus =  timestamp2.strftime('%Y-%m-%d %H:%M:%S') #"#2018-12-18 09:10:22"
 

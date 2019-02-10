@@ -28,6 +28,9 @@ You can check your generated commit tree with:
 git log --graph --oneline --all
 ```
 
+And you can check which files were not added to the git repo automatically with `git status`
+If you wish to add them too, then add them manually with `git add <filename>` and afterwards commit them manually with `git commit -m '<commit message>'`
+
 
 ## Setup with your github repository
 ```
@@ -37,4 +40,4 @@ git push --set-upstream origin master
 
 
 ## Trouble shooting
-At the moment file names with special characters are not added to the git history. To solve this you have to change the name, what will change the edition timestamp of the file. 
+At the moment file names with **special characters** or **spaces** are not added to the git history. To solve this you have to change the name, what will change the edition timestamp of the file. 
