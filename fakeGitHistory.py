@@ -6,7 +6,9 @@ import re
 
 import pandas as pd
 
-
+'''
+    Add given file to git
+'''
 def make_git_add(file):
 
     terminal_cmd = "git add " + file
@@ -16,7 +18,9 @@ def make_git_add(file):
     os.system(terminal_cmd)
 
 
-
+'''
+    Make commit with timestamp of the files date and generated commit message
+'''
 def make_git_commit(timestamp1, timestamp2, commit_message):
 
     date_blank =  timestamp1.strftime('%c') + " +0100" #"Tue Dec 18 09:10 2018 +0100"
@@ -56,7 +60,9 @@ def getListOfFiles(dirName):
 
 
 
-
+'''
+    Sort the files in a folder by its change timestamps and make commits to git per day
+'''
 def sort_files_in_folder_by_changetime(folder):
 
     # read all files in folder
