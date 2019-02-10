@@ -1,4 +1,4 @@
-# Fake Git History project
+# Generate Git History
 This is a skript to help you generate a git history for a project. The problem when starting a git repository for a old project or a project which was already started to be developed, always is, that the initial commit will have a lot of files. Even if the files are written long before that initial date.
 
 This script will automatically look at the editing date of all files in your project folder and will automatically add those files from the same editing day to one commit. At the end you will as much commits as days you last-edited something in your project. 
