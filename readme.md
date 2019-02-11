@@ -39,5 +39,8 @@ git push --set-upstream origin master
 ```
 
 
-## Trouble shooting
+## Trouble shooting (not fixed yet)
 At the moment file names with **special characters** or **spaces** are not added to the git history. To solve this you have to change the name, what will change the edition timestamp of the file. 
+
+
+If files are not added because of special characters or because they are ignored by a .gitignore file those files are still named in the commit message.
