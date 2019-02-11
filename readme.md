@@ -44,3 +44,5 @@ At the moment file names with **special characters** or **spaces** are not added
 
 
 If files are not added because of special characters or because they are ignored by a .gitignore file those files are still named in the commit message.
+
+If the script is run for another folder than '.' the command line commands don't work at the moment.
