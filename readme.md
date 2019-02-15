@@ -2,12 +2,15 @@
 This is a skript to help you generate a git history for a untracked project.
 
 _Usecase_
+
 When you have an old project or a started project where you don't used git, but now you want to track and to version it with git, the problem with the inital commit is that all files are added at the same day. Even if the files are written long before that initial date. For the history before that intial git date you will loose temporal information. 
 
 _Solution_
+
 GenGitHist will help you to generate a pseudo git history for your project. You run it once, and a git history with as much commits as editing dates in the project folder are generated. And all files are added to the retrospective commits. When you push a repository afterwards, you can see all commits in the past.
 
 _How it works_
+
 This script will automatically look at the editing date of all files in your project folder and will automatically add those files from the same editing day to one commit. At the end you will as much commits as days you last-edited something in your project. 
 
 When you save your git repository on github you will see the pasted commit dates at exactly that days you worked on your project in the contribution matrix with the green squares.
@@ -47,10 +50,10 @@ git push --set-upstream origin master
 
 
 ## Trouble shooting (not fixed yet)
-At the moment file names with **special characters** or **spaces** are not added to the git history. To solve this you have to change the name, what will change the edition timestamp of the file. 
+- At the moment file names with **special characters** or **spaces** are not added to the git history. To solve this you have to change the name, what will change the edition timestamp of the file. 
 
-If files are not added because of special characters or because they are ignored by a .gitignore file those files are still named in the commit message.
+- If files are not added because of special characters or because they are ignored by a .gitignore file those files are still named in the commit message.
 
-If the script is run for another folder than '.' the command line commands don't work at the moment.
+- If the script is run for another folder than '.' the command line commands don't work at the moment.
 
 
