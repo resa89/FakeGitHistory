@@ -1,5 +1,5 @@
 # Generate Git History
-This is a skript to help you generate a git history for a untracked project.
+This is a skript to help you generate a git history for an untracked project.
 
 _Usecase_
 
